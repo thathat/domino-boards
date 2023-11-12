@@ -649,7 +649,7 @@ body[data-player] #toolbar {
 .style-1HQnPB8fc0zpeLqCCGokQ { --card-color: #e5efd2ff; }
 .style-CyZclJHl2fVSpLw53gn1Q { --card-color: #d2deefff; }
 .style-vc_VZePmvF5KufvjyQGuX { --card-color: #efd6d2ff; }
-.style-xlPzs0JBKNTPNxweO87oK { --card-color: #ffffff68; --text-size: 19px; --text-color: #434343ff; }</style>
+.style-xlPzs0JBKNTPNxweO87oK { --card-color: #ffffff68; --text-size: 21px; --text-color: #434343ff; }</style>
     <!-- scripts-->
     <script id="database.js">/** 
  * @template T
@@ -3535,7 +3535,7 @@ async function loadDataDeferred() {
   </head>
   <body class="no-select" onload="start()" style="" data-player="true">
     <div id="frame" style="background-color: rgb(106, 107, 116);">
-      <div id="scene" style="transform: matrix3d(0.812252, 0, 0, 0, 0, 0.812252, 0, 0, 0, 0, 0.906252, 0, -361.804, 38.711, 0, 1); transition: none 0s ease 0s;" class="">
+      <div id="scene" style="transform: matrix3d(0.687694, 0, 0, 0, 0, 0.687694, 0, 0, 0, 0, 0.687694, 0, -233.745, -33.5585, 0, 1); transition: none 0s ease 0s;" class="">
         <div id="svgs" data-empty=""></div>
         <div id="cards" data-empty=""></div>
       </div>
@@ -3590,7 +3590,7 @@ also motivated the creation of this tool.</p>
                 <button data-action="global/new">new board</button>
                 <button data-action="global/import">import board</button>
               </div>
-              <select size="12" data-path="global/saves"><option value="5nA3WvcwkscoCzbF4fXAU">vampire house for sale (11/10/2023)</option></select>
+              <select size="12" data-path="global/saves"><option value="5nA3WvcwkscoCzbF4fXAU">vampire house for sale (11/12/2023)</option></select>
               <div class="button-row">
                 <button data-action="global/saves/load">load</button>
                 <button data-action="global/saves/duplicate">duplicate</button>
@@ -3634,7 +3634,7 @@ also motivated the creation of this tool.</p>
           <div class="button-row">
             <input type="text" data-path="global-editor/card-styles/selected/name">
           </div>
-          <div id="card-style-fields"><h2>text</h2><div class="settings-grid"><input type="checkbox" class="check"><span>font</span><select><option value="default">default</option><option value="monospace">monospace</option><option value="serif">serif</option><option value="sans-serif">sans-serif</option><option value="cursive">cursive</option></select><input type="checkbox" class="check"><span>size</span><input type="range" min="8" max="64"><input type="checkbox" class="check"><span>color</span><input type="color"><input type="checkbox" class="check"><span>center</span></div><h2>card</h2><div class="settings-grid"><input type="checkbox" class="check"><span>color</span><input type="color"><input type="range" min="0" max="255"></div></div>
+          <div id="card-style-fields"><h2>text</h2><div class="settings-grid"><input type="checkbox" class="check"><span>font</span><select disabled=""><option value="default">default</option><option value="monospace">monospace</option><option value="serif">serif</option><option value="sans-serif">sans-serif</option><option value="cursive">cursive</option></select><input type="checkbox" class="check"><span>size</span><input type="range" min="8" max="64" disabled=""><input type="checkbox" class="check"><span>color</span><input type="color" disabled=""><input type="checkbox" class="check"><span>center</span></div><h2>card</h2><div class="settings-grid"><input type="checkbox" class="check"><span>color</span><input type="color"><input type="range" min="0" max="255"></div></div>
           <h2>custom css</h2>
           <textarea data-path="global-editor/card-styles/selected/custom-css"></textarea>
           <div class="button-row">
@@ -3645,17 +3645,17 @@ also motivated the creation of this tool.</p>
       </div>
       <div class="sidebar-page" data-tab-body="sidebar/selection" hidden="">
         <div hidden="">
-          <button data-tab-toggle="sidebar/selection/none" data-tab-default="" class=""></button>
-          <button data-tab-toggle="sidebar/selection/cards" class="active"></button>
+          <button data-tab-toggle="sidebar/selection/none" data-tab-default="" class="active"></button>
+          <button data-tab-toggle="sidebar/selection/cards" class=""></button>
           <button data-tab-toggle="sidebar/selection/group"></button>
           <button data-tab-toggle="sidebar/selection/link"></button>
         </div>
-        <div class="sidebar-page" data-tab-body="sidebar/selection/none" hidden="">
+        <div class="sidebar-page" data-tab-body="sidebar/selection/none">
           <div class="sidebar-header">nothing selected</div>
         </div>
-        <div class="sidebar-page" data-tab-body="sidebar/selection/cards">
+        <div class="sidebar-page" data-tab-body="sidebar/selection/cards" hidden="">
           <div class="sidebar-header">
-            <div><span data-path="selection/prompt">1 cards selected</span></div>
+            <div><span data-path="selection/prompt">no cards selected</span></div>
             <div class="button-row">
               <button data-action="selection/cancel">deselect</button>
               <button data-action="selection/copy-id">copy id</button>
@@ -3665,7 +3665,7 @@ also motivated the creation of this tool.</p>
             </div>
           </div>
           <div class="sidebar-panel">
-            <div class="sidebar-group" data-path="card-editor/text">
+            <div class="sidebar-group" data-path="card-editor/text" hidden="">
               <h2>text</h2>
               <div class="button-row">
                 <button data-action="card-editor/text/bold">bold</button>
@@ -3675,7 +3675,7 @@ also motivated the creation of this tool.</p>
               </div>
               <textarea data-path="card-editor/text/value" spellcheck="true"></textarea>
             </div>
-            <div class="sidebar-group" data-path="card-editor/icons">
+            <div class="sidebar-group" data-path="card-editor/icons" hidden="">
               <h2>icons</h2>
               <div id="card-editor-icons">
                 <input class="icon-select" data-path="card-editor/icons/1/icon" type="text">
@@ -3688,14 +3688,14 @@ also motivated the creation of this tool.</p>
                 <input class="icon-action" data-path="card-editor/icons/4/action" type="text">
               </div>
             </div>
-            <div class="sidebar-group" data-path="card-editor/style">
+            <div class="sidebar-group" data-path="card-editor/style" hidden="">
               <h2>style</h2>
               <select data-path="card-editor/styles" size="3"><option value="default">default</option><option value="STYLE-HEADING">heading</option><option value="STYLE-GRID">grid</option><option value="STYLE-TERMINAL">terminal</option><option value="EeMLC4dJM4-iD3bhd2BWk">disabled</option><option value="yrKZvizTDGthzyGX_AA-X">heading 2</option><option value="1HQnPB8fc0zpeLqCCGokQ">context</option><option value="CyZclJHl2fVSpLw53gn1Q">information</option><option value="vc_VZePmvF5KufvjyQGuX">prompt</option><option value="xlPzs0JBKNTPNxweO87oK">default</option></select>
               <div class="button-row">
                 <button data-action="card-editor/styles/edit">edit</button>
               </div>
             </div>
-            <div class="sidebar-group" data-path="card-editor/image">
+            <div class="sidebar-group" data-path="card-editor/image" hidden="">
               <h2>image</h2>
               <div class="button-row">
                 <button data-action="card-editor/image/upload">upload image</button>
@@ -3735,7 +3735,7 @@ also motivated the creation of this tool.</p>
         </div>
       </div>
     </div>
-    <script id="project-data" type="text/json">{"details":{"id":"5nA3WvcwkscoCzbF4fXAU","title":"vampire house for sale","name":"project","focus":"#Sto2yT3XoIAKqBSx7RTMQ"},"cards":[{"id":"r0Y8icCSYKaFkSYrQSURp","position":{"x":1024,"y":240},"size":{"x":6,"y":5},"text":"🩸you are dracula's childe\n🩸dracula is trying to sell the house so you can move to the moon\n🩸your three moms are already there\n🩸you have to lead realtors through the house to speak with dracula\n🩸the house is troublesome & eats all the realtors\n🩸speaking to the house consoles both you and her\n🩸you can promise you'll be back or\n🩸you can encourage her that she'll have a new family soon\n🩸you can help her kill the realtors\n🩸if you kill all the realtors the game ends & you don't go to the moon\n🩸if you soothe the house you can lead a realtor safely to dracula\n🩸dracula sells the castle and the game ends on the moon with moms","icons":[{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""}],"alttext":"","style":"xlPzs0JBKNTPNxweO87oK"},{"id":"Sto2yT3XoIAKqBSx7RTMQ","position":{"x":1024,"y":80},"size":{"x":6,"y":2},"text":"\n༻ Castle for Sale ༺\n","icons":[{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""}],"alttext":"","style":"yrKZvizTDGthzyGX_AA-X"}],"groups":[],"links":[],"cardStyles":[{"id":"STYLE-HEADING","name":"heading","properties":{"text-size":"30px","text-center":true,"card-color":"#00000040","custom-css":".card-body { align-items: center; font-weight: bold; } .card-root { --card-edge-color: rgba(0, 0, 0, 25%); }"}},{"id":"STYLE-GRID","name":"grid","properties":{"custom-css":".card-body { line-height: 1.35em; background-image: linear-gradient(gainsboro 1px, transparent 1px), linear-gradient(90deg, gainsboro 1px, transparent 1px); background-size: 1.3em 1.3em; background-position: .75em .75em; }"}},{"id":"STYLE-TERMINAL","name":"terminal","properties":{"text-font":"monospace","text-color":"#00ff00ff","card-color":"#000000FF"}},{"id":"EeMLC4dJM4-iD3bhd2BWk","name":"disabled","properties":{"text-color":"#7d7d7dff","card-color":"#ffffff7c"}},{"id":"yrKZvizTDGthzyGX_AA-X","name":"heading 2","properties":{"text-size":"40px","card-color":"#0000008c","text-color":"#b73645ff","text-font":"serif","custom-css":".card-text {\nfont-variant: small-caps;\n}","text-center":"true"}},{"id":"1HQnPB8fc0zpeLqCCGokQ","name":"context","properties":{"card-color":"#e5efd2ff","custom-css":""}},{"id":"CyZclJHl2fVSpLw53gn1Q","name":"information","properties":{"card-color":"#d2deefff","custom-css":""}},{"id":"vc_VZePmvF5KufvjyQGuX","name":"prompt","properties":{"card-color":"#efd6d2ff","custom-css":""}},{"id":"xlPzs0JBKNTPNxweO87oK","name":"default","properties":{"text-color":"#434343ff","card-color":"#ffffff68","text-size":"19px"}}],"boardStyle":{"background-color":"#6a6b74"}}</script>
+    <script id="project-data" type="text/json">{"details":{"id":"5nA3WvcwkscoCzbF4fXAU","title":"vampire house for sale","name":"project","focus":"#Sto2yT3XoIAKqBSx7RTMQ"},"cards":[{"id":"r0Y8icCSYKaFkSYrQSURp","position":{"x":1024,"y":240},"size":{"x":5,"y":4},"text":"✥ you are dracula's childe\n✥ dracula is trying to sell the house so you can move to the moon\n✥ you have to lead realtors through the house to speak with dracula\n✥ the house is troublesome & eats all the realtors","icons":[{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""}],"alttext":"","style":""},{"id":"Sto2yT3XoIAKqBSx7RTMQ","position":{"x":1024,"y":80},"size":{"x":5,"y":2},"text":"\n༻ Castle for Sale ༺\n","icons":[{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""}],"alttext":"","style":"yrKZvizTDGthzyGX_AA-X"},{"id":"irShd5_GWHATpfCU7UwHt","position":{"x":1664,"y":240},"size":{"x":4,"y":2},"text":"\n༻ The Moon ༺","icons":[{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""}],"alttext":"","style":"yrKZvizTDGthzyGX_AA-X"},{"id":"6Q6iaAL2cC2QWunHpsR1Z","position":{"x":1664,"y":400},"size":{"x":4,"y":2},"text":"✥ your three moms are already there","icons":[{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""}],"alttext":"","style":""},{"id":"FHEUGKPPYGx7vd6CSwUes","position":{"x":512,"y":240},"size":{"x":4,"y":2},"text":"\n༻ The House ༺","icons":[{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""}],"alttext":"","style":"yrKZvizTDGthzyGX_AA-X"},{"id":"kTMHGcCwZ_azdhDzcpuxs","position":{"x":512,"y":400},"size":{"x":4,"y":2},"text":"✥ speaking to the house consoles both you and her\n✥ you can promise you'll be back or\n✥ you can encourage her that she'll have a new family soon\n✥ you can help her kill the realtors\n","icons":[{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""}],"alttext":"","style":""},{"id":"VKPFxxkZJ_AvkdElGly3D","position":{"x":1024,"y":560},"size":{"x":5,"y":2},"text":"\n༻ The Endings ༺","icons":[{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""}],"alttext":"","style":"yrKZvizTDGthzyGX_AA-X"},{"id":"htOKgt1q3BWD8bkODdjBS","position":{"x":1024,"y":720},"size":{"x":5,"y":2},"text":"✥ if you kill all the realtors the game ends & you don't go to the moon\n✥ if you soothe the house you can lead a realtor safely to dracula\n✥ dracula sells the castle and the game ends on the moon with moms","icons":[{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""}],"alttext":"","style":"default"},{"id":"QXoFB1J4V8-Y36vFGIvuZ","position":{"x":384,"y":720},"size":{"x":5,"y":2},"text":"✥ there are five rooms: foyer, parlor, ballroom, library, dad's tower\n✥ each realtor has a \"kill room\"\n✥ they die at the exit if childe has not talked to the house in that room\n✥ childe has to return to the foyer to meet another realtor","icons":[{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""}],"alttext":"","style":""},{"id":"_v2n_gLW93YeSzJqsGGKc","position":{"x":384,"y":560},"size":{"x":5,"y":2},"text":"\n༻ Realtors & Rooms ༺","icons":[{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""},{"icon":"","action":""}],"alttext":"","style":"yrKZvizTDGthzyGX_AA-X"}],"groups":[],"links":[],"cardStyles":[{"id":"STYLE-HEADING","name":"heading","properties":{"text-size":"30px","text-center":true,"card-color":"#00000040","custom-css":".card-body { align-items: center; font-weight: bold; } .card-root { --card-edge-color: rgba(0, 0, 0, 25%); }"}},{"id":"STYLE-GRID","name":"grid","properties":{"custom-css":".card-body { line-height: 1.35em; background-image: linear-gradient(gainsboro 1px, transparent 1px), linear-gradient(90deg, gainsboro 1px, transparent 1px); background-size: 1.3em 1.3em; background-position: .75em .75em; }"}},{"id":"STYLE-TERMINAL","name":"terminal","properties":{"text-font":"monospace","text-color":"#00ff00ff","card-color":"#000000FF"}},{"id":"EeMLC4dJM4-iD3bhd2BWk","name":"disabled","properties":{"text-color":"#7d7d7dff","card-color":"#ffffff7c"}},{"id":"yrKZvizTDGthzyGX_AA-X","name":"heading 2","properties":{"text-size":"40px","card-color":"#0000008c","text-color":"#b73645ff","text-font":"serif","custom-css":".card-text {\nfont-variant: small-caps;\n}","text-center":"true"}},{"id":"1HQnPB8fc0zpeLqCCGokQ","name":"context","properties":{"card-color":"#e5efd2ff","custom-css":""}},{"id":"CyZclJHl2fVSpLw53gn1Q","name":"information","properties":{"card-color":"#d2deefff","custom-css":""}},{"id":"vc_VZePmvF5KufvjyQGuX","name":"prompt","properties":{"card-color":"#efd6d2ff","custom-css":""}},{"id":"xlPzs0JBKNTPNxweO87oK","name":"default","properties":{"text-color":"#434343ff","card-color":"#ffffff68","text-size":"21px"}}],"boardStyle":{"background-color":"#6a6b74"}}</script>
     <script>loadData();</script>
     <script id="project-data-deferred" type="text/json">{}</script>
     <script id="font" type="text/css" data-font-family="Lora">@font-face {
